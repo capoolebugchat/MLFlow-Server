@@ -27,7 +27,7 @@ spec:
               protocol: TCP
           env:
             - name: "MLFLOW_MYSQL_DB"
-              value: "mlflow"
+              value: "metadb"
             - name: "MLFLOW_MYSQL_USERNAME"
               valueFrom: { secretKeyRef: { name: "mysql-secret", key: "username" } }
             - name: "MLFLOW_MYSQL_PASSWORD"
