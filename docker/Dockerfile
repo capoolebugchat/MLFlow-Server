@@ -1,6 +1,6 @@
 # from https://github.com/flmu/mlflow-tracking-server
 
-FROM python:3.7
+FROM capoolebugchat/mlflow-server:0.1
 
 RUN pip3 install --upgrade pip && \
     pip3 install mlflow --upgrade && \
