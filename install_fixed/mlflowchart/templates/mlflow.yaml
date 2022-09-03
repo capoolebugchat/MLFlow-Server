@@ -26,6 +26,12 @@ spec:
               name: serving
               protocol: TCP
           env:
+            - name: "MLFLOW_MYSQL_DB"
+              value: "mlflow"
+            - name: "MLFLOW_MYSQL_USERNAME"
+              valueFrom: { secretKeyRef: { name: "mysql-secret", key: "username" } }
+            - name: "MLFLOW_MYSQL_PASSWORD"
+              valueFrom: { secretKeyRef: { name: "mysql-secret", key: "password" } }
             - name: "MLFLOW_S3_ENDPOINT_URL"
               value: "http://minio-service.kubeflow.svc.cluster.local:9000"
             - name: "AWS_ACCESS_KEY_ID"
