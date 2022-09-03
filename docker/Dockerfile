@@ -5,7 +5,8 @@ FROM capoolebugchat/mlflow-server:0.1
 RUN pip3 install --upgrade pip && \
     pip3 install mlflow --upgrade && \
     pip3 install awscli --upgrade  && \
-    pip3 install boto3 --upgrade
+    pip3 install boto3 --upgrade && \
+    pip3 install mysqlclient --upgrade
 
 ENV PORT 5000
 ENV AWS_BUCKET bucket
