@@ -20,7 +20,7 @@ fi
 mkdir -p "${FILE_DIR}"
 
 mlflow server \
-    --backend-store-uri "mysql+mysqldb://$MYSQL_USER:$MYSQL_PASSWORD@$MYSQL_ENDPOINT/$MYSQL_DATABASE" \
+    --backend-store-uri "mysql://$MYSQL_USER:$MYSQL_PASSWORD@$MYSQL_ENDPOINT/$MYSQL_DATABASE" \
     --default-artifact-root "s3://$AWS_BUCKET/mlflow/artifacts" \
     --host 0.0.0.0 \
     --port "$PORT"

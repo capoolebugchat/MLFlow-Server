@@ -3,4 +3,4 @@
 image:
   server: capoolebugchat/mlflow-server
   pullPolicy: Always
-  version: 0.13
+  version: 0.14
