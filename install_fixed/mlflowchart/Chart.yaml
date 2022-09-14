@@ -1,7 +1,7 @@
 apiVersion: v1
-appVersion: 0.1
+appVersion: 0.2
 description: MLFlow
 maintainers:
 - name: Quan Le
 name: MLFLOW tracking server
-version: 0.1
+version: 0.2
