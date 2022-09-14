@@ -35,7 +35,7 @@ spec:
             - name: "MYSQL_HOST"
               value: "http://mysql.kubeflow.svc.cluster.local"  
             - name: "MYSQL_PORT"
-              value: "3306"
+              value: 3306
             - name: "MLFLOW_S3_ENDPOINT_URL"
               value: "http://minio-service.kubeflow.svc.cluster.local:9000"
             - name: "AWS_ACCESS_KEY_ID"
