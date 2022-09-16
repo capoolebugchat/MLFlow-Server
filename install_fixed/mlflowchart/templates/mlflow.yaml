@@ -73,13 +73,17 @@ spec:
   hosts:
     - '*'
   http:
-    - match:
-        - uri:
-            prefix: /_/mlflow/
-      rewrite:
-        uri: /
-      route:
-        - destination:
-            host: mlflowserver.kubeflow.svc.cluster.local
-            port:
-              number: 5000
+  - headers:
+      request:
+        add:
+          x-forwarded-prefix: /mlflow
+    match:
+      - uri:
+          prefix: /mlflow/
+    rewrite:
+      uri: /
+    route:
+      - destination:
+          host: mlflowserver.kubeflow.svc.cluster.local
+          port:
+            number: 5000
