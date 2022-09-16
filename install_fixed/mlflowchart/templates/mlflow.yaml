@@ -26,14 +26,16 @@ spec:
               name: serving
               protocol: TCP
           env:
-            - name: "MYSQL_DATABASE"
+            - name: "SQLDB"
               value: "mlflowdb"
-            - name: "MYSQL_USER"
+            - name: "SQLDB_DATABASE"
+              value: "mlflowdb"
+            - name: "SQLDB_USER"
               value: "mlflow"
-            - name: "MYSQL_PASSWORD"
+            - name: "SQLDB_PASSWORD"
               value: "mlflow"
-            - name: "MYSQL_ENDPOINT"
-              value: "mysql.kubeflow.svc.cluster.local:3306"  
+            - name: "SQLDB_ENDPOINT"
+              value: "mlflow-postgresql.default:5432"  
             - name: "MLFLOW_S3_ENDPOINT_URL"
               value: "http://minio-service.kubeflow.svc.cluster.local:9000"
             - name: "AWS_ACCESS_KEY_ID"
