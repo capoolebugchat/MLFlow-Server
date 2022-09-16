@@ -27,7 +27,7 @@ spec:
               protocol: TCP
           env:
             - name: "SQLDB"
-              value: "mlflowdb"
+              value: "postgresql"
             - name: "SQLDB_DATABASE"
               value: "mlflowdb"
             - name: "SQLDB_USER"
