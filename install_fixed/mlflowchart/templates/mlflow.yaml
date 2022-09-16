@@ -35,7 +35,7 @@ spec:
             - name: "SQLDB_PASSWORD"
               value: "mlflow"
             - name: "SQLDB_ENDPOINT"
-              value: "mlflow-postgresql.default:5432"  
+              value: "postgresql.default:5432"  
             - name: "MLFLOW_S3_ENDPOINT_URL"
               value: "http://minio-service.kubeflow.svc.cluster.local:9000"
             - name: "AWS_ACCESS_KEY_ID"
