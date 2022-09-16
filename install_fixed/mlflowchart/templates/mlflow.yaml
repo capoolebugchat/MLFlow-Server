@@ -69,7 +69,7 @@ metadata:
   namespace: kubeflow
 spec:
   gateways:
-    - kubeflow-gateway
+    - cluster-local-gateway
   hosts:
     - '*'
   http:
