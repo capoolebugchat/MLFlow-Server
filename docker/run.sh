@@ -20,7 +20,8 @@ fi
 mkdir -p "${FILE_DIR}"
 
 mlflow server \
-    --backend-store-uri "$SQLDB://$SQLDB_USER:$SQLDB_PASSWORD@$SQLDB_ENDPOINT/$SQLDB_DATABASE" \
-    --default-artifact-root "s3://$AWS_BUCKET/mlflow/artifacts" \
+    --backend-store-uri "$SQLDB://$SQLDB_USER:$SQLDB_PASSWORD@$SQLmlflowdbDB_ENDPOINT/$SQLDB_DATABASE" \
+    --artifact-destination "s3://$AWS_BUCKET/artifacts" \
+    --serve-artifacts \
     --host 0.0.0.0 \
     --port "$PORT"

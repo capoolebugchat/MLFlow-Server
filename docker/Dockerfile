@@ -19,6 +19,6 @@ ENV FILE_DIR /tmp/mlflow
 RUN mkdir -p /opt/mlflow
 
 COPY run.sh /opt/mlflow
-RUN chmod -R 777 /opt/mlflow/
+RUN chmod -R 777 /optsh/mlflow/
 
 ENTRYPOINT ["/opt/mlflow/run.sh"]
