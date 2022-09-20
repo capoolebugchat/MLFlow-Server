@@ -1,0 +1,6 @@
+# application name is a namespace
+# docker images
+image:
+  server: capoolebugchat/mlflow-server
+  pullPolicy: Always
+  version: 0.22
